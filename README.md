@@ -13,6 +13,7 @@ Dependencies：
 - numpy
 - pandas
 - tqdm
+- dgllife 0.2.9
 
 # Using
 
