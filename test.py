@@ -11,7 +11,6 @@ import numpy as np
 import torch
 import torch.nn as nn
 from process import run
-from dgllife.utils import Meter, EarlyStopping
 import sys
 sys.path.append("..") 
 from torch.utils.data import DataLoader
