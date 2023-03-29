@@ -82,10 +82,10 @@ class BaseGNNRegressor(nn.Module):
         feats = self.gnn(bg, node_feats, edge_feats)
 
         # Compute molecule features from atom features
-        h_g,weight = self.readout(bg, feats)
+        h_g = self.readout(bg, feats)
 
         # Multi-task prediction
-        return self.regressor(h_g),weight
+        return self.regressor(h_g)
 
 class BaseGNNRegressorBypass(nn.Module):
     """This architecture uses one GNN for each task (task-speicifc) and one additional GNN shared

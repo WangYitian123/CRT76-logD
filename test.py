@@ -26,7 +26,7 @@ def run_an_eval_epoch(smiles_list,args, model, data_loader):
     with torch.no_grad():
         for _, batch_data in enumerate(data_loader):
             _, bg, labels, masks = batch_data
-            prediction,_ = predict(args, model, bg)
+            prediction = predict(args, model, bg)
             prediction = prediction.detach().cpu() * args['train_std'].cpu()+args['train_mean'].cpu()
             predictions.append(prediction)
         predictions = torch.cat(predictions, dim=0)
