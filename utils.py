@@ -213,7 +213,8 @@ def load_dataset(args, df,name):
                                  smiles_column=args['smiles_column'],
                                  cache_file_path=args['result_path'] +'/'+ str(name)+'_graph.bin',#把图的信息保存在这个文件里
                                  task_names=args['task'],
-                                 n_jobs=args['num_workers'])
+                                 n_jobs=args['num_workers'],
+                                 load=False)
 
     return dataset#返回一个类的实例
 
